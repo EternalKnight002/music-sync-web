@@ -2,8 +2,6 @@
 
 A modern, responsive landing page for Music Sync, a real-time synchronized audio playback application built with Electron. The website showcases the app's features, technology stack, and provides download links.
 
-![Music Sync Hero](public/screenshots/music-sync-main.jpg)
-
 ## 🚀 Features
 
 - **Modern Design**: Clean, glassmorphic UI with smooth animations and transitions
