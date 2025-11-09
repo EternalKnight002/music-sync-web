@@ -1,18 +1,34 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
+// eslint.config.mjs
+import js from "@eslint/js";
+import next from "eslint-config-next";
 
-const eslintConfig = defineConfig([
-  ...nextVitals,
-  ...nextTs,
-  // Override default ignores of eslint-config-next.
-  globalIgnores([
-    // Default ignores of eslint-config-next:
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
-]);
+export default [
+  // 1. ignore build stuff
+  {
+    ignores: [
+      ".next/**",
+      "node_modules/**",
+      "dist/**",
+      "out/**",
+    ],
+  },
 
-export default eslintConfig;
+  // 2. base + next
+  {
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    extends: [
+      js.configs.recommended,
+      next,
+      // if you want stricter:
+      // "next/core-web-vitals",
+    ],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: "module",
+    },
+    rules: {
+      // your custom rules here
+      // "react/jsx-key": "off",
+    },
+  },
+];
