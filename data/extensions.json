@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Music Sync",
+    "slug": "music-sync",
+    "shortDesc": "Real-time synchronized audio playback for multiple devices over network",
+    "longDesc": "Music Sync is a real-time synchronized audio playback system built with Electron that allows multiple clients to play audio files in perfect sync over a network. Features NTP-style clock synchronization, host/client architecture, adaptive playback, and works on both LAN and internet with tunneling support.",
+    "tags": ["electron", "audio", "sync", "desktop"],
+    "screenshots": [
+      "/screenshots/music-sync-1.jpg",
+      "/screenshots/music-sync-2.jpg"
+    ],
+    "githubUrl": "https://github.com/EternalKnight002/music-sync",
+    "downloadUrl": "https://github.com/EternalKnight002/music-sync/releases/latest",
+    "expoUrl": null,
+    "poster": "/videos/music-sync-demo-poster.jpg"
+  }
+]
